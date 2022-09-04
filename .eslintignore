@@ -1,0 +1,7 @@
+.vscode
+.idea
+.local
+!.env-config.ts
+components.d.ts
+/dist/
+/node_modules/
