@@ -5,7 +5,7 @@ import path from 'path'
  * @descrition 末尾不带斜杠
  */
 export function getRootPath(){
-    return path.resolve(process.cwd())
+  return path.resolve(process.cwd())
 }
 
 /**
@@ -13,8 +13,7 @@ export function getRootPath(){
  * @param srcName - src目录名称(默认: "src")
  * @descrition 末尾不带斜杠
  */
- export function getSrcPath(srcName = 'src') {
-    const rootPath = getRootPath();
-  
-    return `${rootPath}/${srcName}`;
-  }
+export function getSrcPath(srcName = 'src') {
+  const rootPath = getRootPath();
+  return `${rootPath}/${srcName}`;
+}

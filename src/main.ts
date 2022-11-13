@@ -7,8 +7,8 @@ import { setupStore } from "./store";
 
 async function setupApp() {
   const app = createApp(App);
-  app.mount("#app");
   await setupRouter(app);
   setupStore(app)
+  app.mount("#app");
 }
 setupApp();

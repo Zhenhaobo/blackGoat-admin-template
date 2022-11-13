@@ -26,6 +26,7 @@ module.exports = {
     // 'vue/no-unused-vars': 'error'
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     indent: ['error', 2], // 缩进风格
+    'max-len': 20,
     //quotes: ['error', 'single', { 'avoidEscape': true }], // 使用单引号
     'comma-dangle': ['error', 'never'], // 禁止对象尾逗号
     "vue/comment-directive": "off",

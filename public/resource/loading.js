@@ -1,4 +1,4 @@
-function setupLoading(svgId,titleId) {
+function setupLoading(svgId) {
   const svg = `<svg
   t="1662468742488"
   class="icon"
@@ -27,8 +27,7 @@ function setupLoading(svgId,titleId) {
 </svg>`;
   const div = document.createElement("div");
   const svgDiv = document.querySelector(svgId);
-  const svgTilte = document.querySelector(titleId);
-  svgTilte.innerText = viteEnv.VITE_APP_TITLE
+  const id = document.querySelector('#loading-title');
   div.innerHTML = svg;
   if (svgDiv) {
     svgDiv.appendChild(div);
@@ -36,10 +35,11 @@ function setupLoading(svgId,titleId) {
     const defaultColor = "#1890ff";
     const themeColor = window.localStorage.getItem(key) || defaultColor;
     const cssVars = `--primary-color: ${themeColor}`;
-    svgDiv.style.color = cssVars
+    console.log('cssVars: ', cssVars);
+    svgDiv.style.color = `var(${cssVars})`
   }
 }
 
-setupLoading("#loading-svg",'loading-title');
+setupLoading("#loading-svg");
 
 

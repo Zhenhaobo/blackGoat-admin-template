@@ -1,14 +1,14 @@
 import { defineConfig , loadEnv} from "vite";
-import vue from "@vitejs/plugin-vue";
+
 import WindiCSS from "vite-plugin-windicss";
-import { getRootPath, getSrcPath } from "./build";
+import { getRootPath, getSrcPath ,setupPlugins} from "./build";
 // https://vitejs.dev/config/
 const rootPath = getRootPath();
 const srcPath = getSrcPath();
 export default defineConfig(configEnv => {
   const viteEnv = loadEnv(configEnv.mode, process.cwd()) as unknown as ImportMetaEnv;
   return {
-    plugins: [vue(), WindiCSS()],
+    plugins: setupPlugins(viteEnv),
     resolve: {
       alias: {
         "@": srcPath,
