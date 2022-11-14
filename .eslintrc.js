@@ -26,7 +26,9 @@ module.exports = {
     // 'vue/no-unused-vars': 'error'
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     indent: ['error', 2], // 缩进风格
-    'max-len': 20,
+    'max-len':[
+      "error",{code:80,comments:200}
+    ],
     //quotes: ['error', 'single', { 'avoidEscape': true }], // 使用单引号
     'comma-dangle': ['error', 'never'], // 禁止对象尾逗号
     "vue/comment-directive": "off",
@@ -42,15 +44,21 @@ module.exports = {
       'warn',
       { destructuring: 'all' /* ignoreReadBeforeAssign: true */ }
     ], // 使用 const 声明固定值，参考：https://cn.eslint.org/docs/rules/prefer-const
-    'prefer-template': 'error', // 使用模板字面量拼接字符串，参考：https://eslint.org/docs/rules/prefer-template
-    'object-shorthand': 'off', // 使用 ES6+ 语法简写对象，参考：https://eslint.org/docs/rules/object-shorthand
-    'no-constant-condition': 'error', // 禁止在条件语句中使用常量，参考：https://eslint.org/docs/rules/no-constant-condition
+    'prefer-template': 'error',
+    // 使用模板字面量拼接字符串，参考：https://eslint.org/docs/rules/prefer-template
+    'object-shorthand': 'off',
+    // 使用 ES6+ 语法简写对象，参考：https://eslint.org/docs/rules/object-shorthand
+    'no-constant-condition': 'error',
+    // 禁止在条件语句中使用常量，参考：https://eslint.org/docs/rules/no-constant-condition
 
     // TS
     "@typescript-eslint/explicit-module-boundary-types": "off",
-    '@typescript-eslint/no-explicit-any': 'off', // 关闭：禁止使用 any 类型，参考：https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-explicit-any.md
-    // '@typescript-eslint/no-non-null-assertion': 'off', // 关闭：禁止使用 ! 进行非空断言，参考：https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-non-null-assertion.md
-    '@typescript-eslint/no-non-null-asserted-optional-chain': 'off', // 关闭：禁止在可选链后使用 ! 进行非空断言，参考：https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-non-null-asserted-optional-chain.md
+    '@typescript-eslint/no-explicit-any': 'off',
+    // 关闭：禁止使用 any 类型，参考：https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-explicit-any.md
+    // '@typescript-eslint/no-non-null-assertion': 'off',
+    // 关闭：禁止使用 ! 进行非空断言，参考：https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-non-null-assertion.md
+    '@typescript-eslint/no-non-null-asserted-optional-chain': 'off',
+    // 关闭：禁止在可选链后使用 ! 进行非空断言，参考：https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-non-null-asserted-optional-chain.md
 
     // vue
     'vue/no-v-html': 'off', // 关闭：禁止使用 v-html

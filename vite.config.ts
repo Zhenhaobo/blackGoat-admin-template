@@ -6,7 +6,8 @@ import { getRootPath, getSrcPath ,setupPlugins} from "./build";
 const rootPath = getRootPath();
 const srcPath = getSrcPath();
 export default defineConfig(configEnv => {
-  const viteEnv = loadEnv(configEnv.mode, process.cwd()) as unknown as ImportMetaEnv;
+  const viteEnv =
+  loadEnv(configEnv.mode, process.cwd()) as unknown as ImportMetaEnv;
   return {
     plugins: setupPlugins(viteEnv),
     resolve: {

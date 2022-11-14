@@ -19,8 +19,7 @@
     },
     "types": [
       "vite/client",
-      "node",
-      "naive-ui/volar"
+      "node"
     ]
   },
   "exclude": ["node_modules", "dist"]

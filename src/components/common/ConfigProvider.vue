@@ -1,9 +1,13 @@
+<!-- eslint-disable max-len -->
 <template>
   <n-loading-bar-provider>
     <n-dialog-provider>
       <n-notification-provider>
         <n-message-provider>
           <slot />
+          <n-button type="info">
+            Info
+          </n-button>
           <naive-provider-content />
         </n-message-provider>
       </n-notification-provider>
@@ -13,9 +17,19 @@
 
 <script lang='ts' setup>
 import { defineComponent, h } from 'vue'
-import {useLoadingBar, useDialog, useNotification, useMessage,NLoadingBarProvider,NDialogProvider,NMessageProvider,NNotificationProvider } from 'naive-ui'
+import
+{
+  useLoadingBar,
+  useDialog,
+  useNotification,
+  useMessage,
+  NLoadingBarProvider,
+  NDialogProvider,
+  NMessageProvider,
+  NNotificationProvider
+} from 'naive-ui'
 
-function configProviderInject(){
+function configProviderInject() {
   window.$loadingBar = useLoadingBar()
   window.$useDialog = useDialog()
   window.$useNotification = useNotification()
@@ -27,8 +41,8 @@ const NaiveProviderContent = defineComponent({
   setup() {
     configProviderInject();
   },
-  render(){
-    return  h('div')
+  render() {
+    return h('div')
   }
 });
 </script>
